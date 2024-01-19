@@ -86,6 +86,7 @@ export const getUserData = createAsyncThunk("/user/details", async () => {
     return res?.data;
   } catch (error) {
     toast.error(error.message);
+    throw error;
   }
 });
 
